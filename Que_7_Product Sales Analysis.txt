@@ -1,0 +1,13 @@
+/* Write your T-SQL query statement below */
+select p.product_name,s.year,s.price from Sales s inner join Product p
+On s.product_id =p.product_id 
+
+Based on your question:
+
+Since the goal is to return a valid product_name for every sale, INNER JOIN is the best option because it ensures that only the rows with matching product_id values in both the Sales and Product tables are included in the result.
+If, however, you want to include sales even if a product isn't found in the Product table, then use LEFT JOIN.
+
+Conclusion:
+Use INNER JOIN if you're sure every sale has a corresponding product and you don't want to include sales without matching products.
+Use LEFT JOIN if you want to include all sales, even if some products are missing from the Product table.
+Let me know if you need further clarification!
